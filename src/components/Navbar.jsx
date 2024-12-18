@@ -31,9 +31,35 @@ function Navbar() {
 
                 {isAuthenticated ? (
                     <>
-                        {/* Rutas para usuarios autenticados */}
-                        <NavLinkItem to="/products" icon={<IoAddCircle size={24} />} label="Productos" />
-                        <NavLinkItem to="/categories" icon={<IoAddCircle size={24} />} label="Categorías" />
+                        {/* Productos - Desplegable */}
+                        <li className="relative group">
+                            <button
+                                className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-[#163c70] transition duration-300"
+                            >
+                                <IoAddCircle size={24} />
+                                <span>Productos</span>
+                            </button>
+                            <div className="absolute top-full left-0 mt-2 bg-[#2d3e52] rounded-lg shadow-lg w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <NavLinkItem to="/products" label="Ver Productos" />
+                                <NavLinkItem to="/add-products" label="Crear Producto" />
+                            </div>
+                        </li>
+
+                        {/* Categorías - Desplegable */}
+                        <li className="relative group">
+                            <button
+                                className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-[#163c70] transition duration-300"
+                            >
+                                <IoAddCircle size={24} />
+                                <span>Categorías</span>
+                            </button>
+                            <div className="absolute top-full left-0 mt-2 bg-[#2d3e52] rounded-lg shadow-lg w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <NavLinkItem to="/categories" label="Ver Categorías" />
+                                <NavLinkItem to="/add-categories" label="Crear Categoría" />
+                            </div>
+                        </li>
+
+                        {/* Otras rutas */}
                         <NavLinkItem to="/cart" icon={<IoCart size={24} />} label="Carrito" />
                         <NavLinkItem to="/contacto" icon={<IoCall size={24} />} label="Contacto" />
                         <button
@@ -58,7 +84,7 @@ function Navbar() {
 
 function NavLinkItem({ to, icon, label }) {
     return (
-        <li>
+        <div>
             <NavLink
                 to={to}
                 className={({ isActive }) =>
@@ -70,7 +96,7 @@ function NavLinkItem({ to, icon, label }) {
                 {icon}
                 <span>{label}</span>
             </NavLink>
-        </li>
+        </div>
     );
 }
 
