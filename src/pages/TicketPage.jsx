@@ -42,10 +42,13 @@ function TicketPage() {
 
         currentY += rowHeight;
 
+        // Obtener la URL base de la variable de entorno
+        const server = import.meta.env.VITE_BASE_URL + "/img/";
+
         // Añadir los productos del carrito al PDF
-        cart.forEach((item,) => {
-            // Imagen del producto
-            const imgUrl = `http://localhost:4000/img/${item.producto.image}`;
+        cart.forEach((item) => {
+            // Construir la URL completa de la imagen
+            const imgUrl = `${server}${item.producto.image}`;
             doc.addImage(imgUrl, 'JPEG', 20, currentY, 20, 20); // Imagen (ajustar tamaño)
 
             // Descripción, precio, cantidad y subtotal

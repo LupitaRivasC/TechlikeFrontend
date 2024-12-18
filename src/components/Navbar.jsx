@@ -41,7 +41,7 @@ function Navbar() {
                             </button>
                             <div className="absolute top-full left-0 mt-2 bg-[#2d3e52] rounded-lg shadow-lg w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <NavLinkItem to="/products" label="Ver Productos" />
-                                <NavLinkItem to="/add-products" label="Crear Producto" />
+                                <NavLinkItem to="/add-product" label="Crear Producto" />
                             </div>
                         </li>
 

@@ -4,8 +4,8 @@ import { IoTrashBinSharp, IoAddSharp, IoRemoveSharp } from 'react-icons/io5';
 
 function CartCard({ item }) {
     const { deleteCart, addToCart, removeFromCart } = useCart();
-    const server = 'http://localhost:4000/img/';
 
+    const server = import.meta.env.VITE_BASE_URL + "/img/";
     // Función para calcular el total de un solo producto
     const calculateProductTotal = (product) => {
         return product.producto.price * product.cantidad;

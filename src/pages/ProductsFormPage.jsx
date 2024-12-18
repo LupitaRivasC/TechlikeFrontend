@@ -8,7 +8,7 @@ import { Tooltip } from "@material-tailwind/react";
 import { useCategories } from "../context/CategoryContext";
 
 function ProductsFormPage() {
-  const server = "http://localhost:4000/public/img/";
+  const server = import.meta.env.VITE_BASE_URL+"/img/";
   const {
     register,
     handleSubmit,
