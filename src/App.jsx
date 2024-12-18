@@ -16,10 +16,7 @@ import CategoryPage from './pages/CategoryPage'; // Ruta para manejo de categor�
 import { CategoriesProvider } from './context/CategoryContext'; // Proveedor de contexto para categorías
 import CartPage from './pages/CartPage'; // Ruta para la página del carrito
 import { CartProvider } from './context/CartContext'; // Proveedor de contexto del carrito
-import PerfilFormPage from './pages/PerfilFormPage.jsx'; // Importa tu página de perfil
-import { ProfileProvider } from './context/PerfilContext.jsx'; // Asegúrate de que el nombre coincida
-import PerfilPage from './pages/PerfilPage.jsx'; // Importa tu página de perfil
-
+import TicketPage from './pages/TicketPage.jsx'
 
 function App() {
   return (
@@ -27,7 +24,6 @@ function App() {
       <ProductsProvider>
         <CategoriesProvider> {/* Proveedor de contexto para categorías */}
           <CartProvider> {/* Proveedor de contexto para el carrito */}
-            <ProfileProvider> {/* Proveedor de contexto para el perfil */}
               <BrowserRouter
                 future={{
                   v7_startTransition: true,
@@ -43,10 +39,6 @@ function App() {
                     <Route path="/principal" element={<PrincipalPage />} /> {/* Nueva ruta principal */}
                    
                     <Route path="/cart" element={<CartPage />} /> {/* Nueva ruta para el carrito */}
-                    
-                    {/* Rutas de perfiles */}
-                    <Route path="/perfil" element={<PerfilFormPage />} /> {/* Página para agregar perfil */}
-                    <Route path="/perfiles" element={<PerfilPage/>} /> {/* Página para editar perfil */}
 
                     {/* Selección de rutas protegidas */}
                     <Route element={<ProtectedRoute />}>
@@ -58,13 +50,13 @@ function App() {
                       <Route path="/categories" element={<CategoryPage />} />
                       <Route path="/add-categories" element={<CategoryFormPage />} /> {/* Nueva ruta para categorías */}
                       <Route path="/categories/:id" element={<CategoryFormPage />} /> {/* Nueva ruta específica por ID */}
+                      <Route path="/ticket" element={<TicketPage />} />
                     </Route>
 
                     <Route path='*' element={<NotFound />} />
                   </Routes>
                 </main>
               </BrowserRouter>
-            </ProfileProvider>
           </CartProvider>
         </CategoriesProvider>
       </ProductsProvider>

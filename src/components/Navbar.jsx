@@ -7,8 +7,7 @@ import {
     IoLogOut, 
     IoCart, 
     IoHome, 
-    IoCall, 
-    IoPerson
+    IoCall,
 } from "react-icons/io5";
 
 function Navbar() {
@@ -37,7 +36,6 @@ function Navbar() {
                         <NavLinkItem to="/categories" icon={<IoAddCircle size={24} />} label="Categorías" />
                         <NavLinkItem to="/cart" icon={<IoCart size={24} />} label="Carrito" />
                         <NavLinkItem to="/contacto" icon={<IoCall size={24} />} label="Contacto" />
-                        <NavLinkItem to="/perfil" icon={<IoPerson size={24} />} label="Perfil" /> {/* Nueva ruta Perfil */}
                         <button
                             onClick={logout}
                             className="flex items-center gap-2 bg-[#163c70] p-2 rounded-lg text-white hover:bg-[#0f2546] transition duration-300 shadow-md"

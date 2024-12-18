@@ -22,7 +22,7 @@ function ProductsPage() {
                     <div className="flex justify-between items-center mb-8">
                         <h1 className="text-5xl font-extrabold text-white">Productos</h1>
                         <Link
-                            to="/add-products"  // Ruta para agregar categoría
+                            to="/add-product"  // Ruta para agregar categoría
                             className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center transition duration-300 shadow-md"
                         >
                             <IoAddCircleSharp size={24} className="mr-2" />
