@@ -29,9 +29,6 @@ function CartPage() {
             {cart.length > 0 && (
                 <div className="mt-6 text-white text-lg font-semibold">
                     <p>Total: ${getTotal().toFixed(2)}</p>
-                    <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 mt-4 rounded-full transition duration-300 flex items-center shadow-lg transform hover:-translate-y-1">
-                        Proceder al Pago
-                    </button>
                 </div>
             )}
         </div>
