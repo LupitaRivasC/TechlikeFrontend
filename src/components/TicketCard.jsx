@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
 function TicketCard({ item }) {
+    const server = import.meta.env.VITE_BASE_URL+"/img/";
 
-    const server = import.meta.env.VITE_BASE_URL + "/img/";
     // Función para calcular el total de un solo producto
     const calculateProductTotal = (product) => {
         return product.producto.price * product.cantidad;

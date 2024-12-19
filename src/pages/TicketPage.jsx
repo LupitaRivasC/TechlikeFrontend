@@ -20,6 +20,7 @@ function TicketPage() {
     // Función para generar el PDF del ticket
     const generatePDF = () => {
         const doc = new jsPDF();
+        const server = import.meta.env.VITE_BASE_URL + "/img/"; // Implementación de variable de entorno
 
         // Título del PDF
         doc.setFont('helvetica', 'bold');
@@ -42,12 +43,9 @@ function TicketPage() {
 
         currentY += rowHeight;
 
-        // Obtener la URL base de la variable de entorno
-        const server = import.meta.env.VITE_BASE_URL + "/img/";
-
         // Añadir los productos del carrito al PDF
         cart.forEach((item) => {
-            // Construir la URL completa de la imagen
+            // Imagen del producto
             const imgUrl = `${server}${item.producto.image}`;
             doc.addImage(imgUrl, 'JPEG', 20, currentY, 20, 20); // Imagen (ajustar tamaño)
 

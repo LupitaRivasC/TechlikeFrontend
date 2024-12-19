@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext'; // Nuevo contexto para carrito
 import { IoTrashBinSharp, IoPencilSharp, IoCartSharp } from 'react-icons/io5'; // Iconos necesarios
 
 function ProductCard({ product }) {
-    const server = import.meta.env.VITE_BASE_URL + "/img/";
+    const server = import.meta.env.VITE_BASE_URL+"/img/";
     const { deleteProduct } = useProducts();
     const { addToCart } = useCart(); // Función para agregar al carrito
 
