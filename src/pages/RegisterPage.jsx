@@ -105,7 +105,7 @@ function RegisterPage() {
                         <IoPersonAdd size={30} />
                     </button>
                     <ReCaptcha
-                        sitekey="6Lcv-5IqAAAAAM5Ip1QiXqsguEr7GRPP7rrdmrTQ"
+                        sitekey="6LeQA6AqAAAAAM717ThnkiAqQm2leobzfLLDFcpy"
                         onChange={(value) => setCaptchaValue(value)}
                         aria-hidden="false"
                     />

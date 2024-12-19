@@ -88,7 +88,7 @@ function LoginPage() {
 
           {/* Recaptcha */}
           <ReCaptcha
-            sitekey="6Lcv-5IqAAAAAM5Ip1QiXqsguEr7GRPP7rrdmrTQ"
+            sitekey="6LeQA6AqAAAAAM717ThnkiAqQm2leobzfLLDFcpy"
             onChange={setCaptchaValue}
             aria-hidden="false"
             className="mt-4"
