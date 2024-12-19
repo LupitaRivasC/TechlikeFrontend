@@ -26,7 +26,7 @@ function LoginPage() {
   });
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-[#2c4790] to-[#1b2f5e]">
+    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-[#2c4790] to-[#1b2f5e]"aria-hidden="false">
       <div className="bg-white max-w-md w-full p-8 rounded-lg shadow-lg">
         
         {/* Error messages */}
@@ -90,6 +90,7 @@ function LoginPage() {
           <ReCaptcha
             sitekey="6Lcv-5IqAAAAAM5Ip1QiXqsguEr7GRPP7rrdmrTQ"
             onChange={setCaptchaValue}
+            aria-hidden="false"
             className="mt-4"
           />
 
